@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/SimpleJson.dir/test.cpp.o CMakeFiles/SimpleJson.dir/src/json.cpp.o CMakeFiles/SimpleJson.dir/src/jsonGenerator.cpp.o CMakeFiles/SimpleJson.dir/src/jsonParser.cpp.o CMakeFiles/SimpleJson.dir/src/jsonValue.cpp.o  -o SimpleJson 

@@ -1,0 +1,3 @@
+/home/chenwek/mySimpleJson/build/CMakeFiles/rebuild_cache.dir
+/home/chenwek/mySimpleJson/build/CMakeFiles/edit_cache.dir
+/home/chenwek/mySimpleJson/build/CMakeFiles/SimpleJson.dir
