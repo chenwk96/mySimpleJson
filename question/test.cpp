@@ -1,14 +1,11 @@
+#include <assert.h>
 #include <iostream>
-
 using namespace std;
 
-void print(unsigned long i) {
-    cout << i << endl;
-}
-
 int main() {
-    for (int i = 1; i < 4; ++i) {
-        print(i);
-    }
+    int a = 2;
+    int b = 0;
+    assert(b != 0);
+    cout << a / b << endl;
     return 0;
 }

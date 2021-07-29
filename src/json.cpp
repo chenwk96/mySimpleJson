@@ -2,6 +2,8 @@
 #include "jsonValue.h"
 #include "jsonException.h"
 
+
+// 解析出现异常，会返回一个错误信息给可选的string引用参数status
 void Json::parse(const std::string& content, std::string& status) noexcept {
     try {
         parse(content);

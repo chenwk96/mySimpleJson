@@ -50,6 +50,7 @@ private:
     void free() noexcept;
 
     type type_ = Null;
+    
     union {
         // 节省内存
         double num_;

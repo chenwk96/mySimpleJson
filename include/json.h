@@ -66,7 +66,7 @@ public:
 	void clear_object() noexcept;
 private:
 	
-    std::unique_ptr<Value> v;
+    std::unique_ptr<Value> v;     // 指针Value指针
     
     friend bool operator==(const Json &lhs, const Json &rhs) noexcept;
 	friend bool operator!=(const Json &lhs, const Json &rhs) noexcept;

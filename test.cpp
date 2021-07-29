@@ -4,9 +4,9 @@
 #include "json.h"
 
 static int main_ret = 0;
-static int test_count = 0;
-static int test_pass = 0;
-static std::string status;
+static int test_count = 0;              // 全局变量，记录测试次数
+static int test_pass = 0;               // 全局变量，记录通过次数
+static std::string status;              // 记录解析结果
 
 #define EXPECT_EQ_BASE(expect, actual) \
     do {\

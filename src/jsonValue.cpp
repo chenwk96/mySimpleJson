@@ -40,6 +40,9 @@ int Value::get_type() const noexcept {
 
 void Value::set_type(type t) noexcept {
     // 这里为什么要free()?
+    // 答案就是uion,C++11后允许uion里放各种各样的东西，包括拥有构造函数和析构函数的类
+    // 但是进行状态转换时，就必须把原对象析构
+    // 一般这种用法通常都是放在一个类中，然后通过一个判别式记录类型，对其进行管理
     free();
     type_ = t;
 }

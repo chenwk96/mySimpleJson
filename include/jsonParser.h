@@ -20,8 +20,8 @@ private:
     void parse_array();
     void parse_object();
 
-    Value &val_;
-    const char *cur_;
+    Value &val_;                // 解析后所得到的的JSON对象的引用
+    const char *cur_;           // 指向Json字符串当前解析位置的指针
 };
 
 #endif

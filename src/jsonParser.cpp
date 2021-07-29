@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include "jsonException.h"
 #include "jsonParser.h"
-
+// 若一个 JSON 只含有空白，传回 LEPT_PARSE_EXPECT_VALUE
+// 若一个值之后，在空白之后还有其他字符，传回 LEPT_PARSE_ROOT_NOT_SINGULAR。
+// 若值不是与类型不符合，传回 LEPT_PARSE_INVALID_VALUE。
 
 inline void expect(const char* &c, char ch) {
     assert(*c == ch);
@@ -58,7 +60,7 @@ void Parser::parse_number() {
     if (*p == '-') ++p;
     if (*p == '0') ++p;
     else {
-        if (!isdigit(*p)) 
+        if (!isdigit(*p))    // *p > '0' && *p < '9'
             throw Exception("parse invalid value");
         while (isdigit(*++p));
     }
@@ -75,7 +77,7 @@ void Parser::parse_number() {
         while (isdigit(*++p));
     }
     errno = 0;
-    double v = strtod(cur_, NULL);
+    double v = strtod(cur_, NULL);   // 讲一个字符串转换为一个浮点数
     if (errno == ERANGE && (v == HUGE_VAL || v == -HUGE_VAL))
         throw (Exception("parse number too big"));
     val_.set_number(v);
